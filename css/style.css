@@ -1,0 +1,80 @@
+/* *,
+*:before,
+*:after {
+  box-sizing: border-box;
+} */
+
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Keep adding new columns - even if theres is no content for them. content does not always take up full width */
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  /* Don't add more columns than theres is content for. && +content "always" take full width */
+  grid-gap: 1rem;
+  grid-template-rows: 1fr 3fr 1fr;
+}
+
+h1 {
+  font-size: 3rem;
+  font-family: itc-avant-garde-gothic-pro, sans-serif;
+  font-weight: 700;
+  font-style: ;
+  letter-spacing: 0rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: Poppins, sans-serif;
+}
+
+a:link {
+  color: black;
+}
+a:hover {
+  color: orange;
+}
+a:visited {
+  color: black;
+}
+a:active {
+  color: pink;
+}
+
+header {
+  grid-row: 1/2;
+  background-color: burlywood;
+  grid-column: 1 / auto-fill;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+  margin-left: 2em;
+  padding: 1em;
+}
+
+main {
+  grid-row: 2/3;
+  background-color: azure;
+  grid-column: 1 / auto-fill;
+}
+
+footer {
+  background-color: darkcyan;
+  grid-row: 3/4;
+  grid-column: 1 / auto-fill;
+}
