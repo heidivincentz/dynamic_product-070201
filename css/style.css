@@ -21,6 +21,11 @@ h1 {
   font-style: ;
   letter-spacing: 0rem;
 }
+h2 {
+  font-size: 2em;
+  font-family: poppins;
+  font-weight: 700;
+}
 
 ul {
   list-style: none;
@@ -33,6 +38,7 @@ a {
   text-decoration: none;
   font-size: 1.5em;
   font-family: Poppins, sans-serif;
+  font-weight: 300;
 }
 
 a:link {
@@ -71,10 +77,18 @@ main {
   grid-row: 2/3;
   background-color: azure;
   grid-column: 1 / auto-fill;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 footer {
   background-color: darkcyan;
   grid-row: 3/4;
   grid-column: 1 / auto-fill;
+}
+
+.shirt {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
 }
