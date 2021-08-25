@@ -1,8 +1,8 @@
-/* *,
+*,
 *:before,
 *:after {
   box-sizing: border-box;
-} */
+}
 
 body {
   display: grid;
@@ -11,7 +11,8 @@ body {
   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
   /* Don't add more columns than theres is content for. && +content "always" take full width */
   grid-gap: 1rem;
-  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(300px, auto));
+  padding: 0.5rem;
 }
 
 h1 {
@@ -55,9 +56,10 @@ a:active {
 }
 
 header {
-  grid-row: 1/2;
+  grid-row: 1 / auto-fill;
   background-color: burlywood;
   grid-column: 1 / auto-fill;
+  padding: 1rem;
 }
 
 nav {
@@ -74,21 +76,55 @@ ul {
 }
 
 main {
-  grid-row: 2/3;
+  grid-row: 2 / auto-fill;
   background-color: azure;
   grid-column: 1 / auto-fill;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+  Keep adding new rows - even if theres is no content for them. content does not always take up full height
 }
 
 footer {
   background-color: darkcyan;
-  grid-row: 3/4;
+  grid-row: 3 / auto-fit;
   grid-column: 1 / auto-fill;
 }
 
 .shirt {
   border-style: solid;
   border-color: black;
+  border-radius: 2em;
   border-width: 1px;
+  display: flex;
+  flex-flow: column;
+  /* flex-wrap: wrap; */
+  padding: 1rem;
+  margin: 1rem;
+}
+
+article > button {
+  background: tomato;
+  color: #ffffff;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  margin: 1rem;
+  padding: 1rem;
+  border-style: none;
+  margin-top: auto;
+}
+ button > a:link{ color:white;}
+ 
+ button > a:visited { color:white;}
+ button > a:hover { color:violet; }
+ button > a:active {color: green;}
+
+article > img {
+  order: -1;
+  align-self: center;
+  max-height: 50%;
+}
+
+article > h1 {
+  margin: 1rem 1rem 0;
 }
