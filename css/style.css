@@ -13,6 +13,8 @@ body {
   grid-gap: 1rem;
   grid-template-rows: repeat(auto-fit, minmax(300px, auto));
   padding: 0.5rem;
+  background-color: #252525;
+  color: white;
 }
 
 h1 {
@@ -55,7 +57,6 @@ a:active {
 
 header {
   grid-row: 1 / 2;
-  background-color: burlywood;
   grid-column: 1 / auto-fill;
   padding: 1rem;
 }
@@ -84,7 +85,6 @@ main {
 }
 
 footer {
-  background-color: darkcyan;
   grid-row: 3 / auto-fit;
   grid-column: 1 / auto-fill;
 }
@@ -132,7 +132,7 @@ button > a:active {
 article > img {
   order: -1;
   align-self: center;
-  max-width: 70%;
+  max-width: 100%;
   height: auto;
 }
 
