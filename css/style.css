@@ -43,16 +43,16 @@ a {
 }
 
 a:link {
-  color: black;
+  color: white;
 }
 a:hover {
-  color: orange;
+  color: tomato;
 }
 a:visited {
-  color: black;
+  color: white;
 }
 a:active {
-  color: pink;
+  color: black;
 }
 
 header {
@@ -74,7 +74,7 @@ ul {
   padding: 1em;
 }
 
-main {
+#mainlist {
   grid-row: 2 / 3;
   grid-column: 1 / auto-fill;
   display: grid;
@@ -87,6 +87,11 @@ main {
 footer {
   grid-row: 3 / auto-fit;
   grid-column: 1 / auto-fill;
+  font-size: 1rem;
+}
+
+footer > a {
+  font-size: 0.5rem;
 }
 
 .shirt {
@@ -115,6 +120,16 @@ article > button {
   margin-top: auto;
 }
 
+button {
+  background: tomato;
+  color: #ffffff;
+  font-size: 1rem;
+  border-radius: 2rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-style: none;
+}
+
 button > a:link {
   color: white;
 }
@@ -126,7 +141,7 @@ button > a:hover {
   color: violet;
 }
 button > a:active {
-  color: green;
+  color: black;
 }
 
 article > img {
@@ -146,4 +161,8 @@ p {
   font-weight: 300;
   color: gray;
   margin: 0.25em 1rem 1rem;
+}
+
+.discounted {
+  display: flex;
 }
