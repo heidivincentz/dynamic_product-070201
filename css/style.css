@@ -16,11 +16,9 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3em;
   font-family: itc-avant-garde-gothic-pro, sans-serif;
   font-weight: 700;
-  font-style: ;
-  letter-spacing: 0rem;
 }
 h2 {
   font-size: 2em;
@@ -56,7 +54,7 @@ a:active {
 }
 
 header {
-  grid-row: 1 / auto-fill;
+  grid-row: 1 / 2;
   background-color: burlywood;
   grid-column: 1 / auto-fill;
   padding: 1rem;
@@ -76,13 +74,13 @@ ul {
 }
 
 main {
-  grid-row: 2 / auto-fill;
-  background-color: azure;
+  grid-row: 2 / 3;
   grid-column: 1 / auto-fill;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
-  Keep adding new rows - even if theres is no content for them. content does not always take up full height
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(40vh, 1fr));
+  /* grid-template-rows: repeat(auto-fill, minmax(40vh, 1fr)); */
+  /* Keep adding new rows - even if theres is no content for them. content does not always take up full height */
 }
 
 footer {
@@ -101,30 +99,51 @@ footer {
   /* flex-wrap: wrap; */
   padding: 1rem;
   margin: 1rem;
+  /* background-image: url(assets/6401163.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat; */
 }
 
 article > button {
   background: tomato;
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border-radius: 2rem;
   margin: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
   border-style: none;
   margin-top: auto;
 }
- button > a:link{ color:white;}
- 
- button > a:visited { color:white;}
- button > a:hover { color:violet; }
- button > a:active {color: green;}
+
+button > a:link {
+  color: white;
+}
+
+button > a:visited {
+  color: white;
+}
+button > a:hover {
+  color: violet;
+}
+button > a:active {
+  color: green;
+}
 
 article > img {
   order: -1;
   align-self: center;
-  max-height: 50%;
+  max-width: 70%;
+  height: auto;
 }
 
 article > h1 {
   margin: 1rem 1rem 0;
+}
+
+p {
+  font-size: 1em;
+  font-family: poppins;
+  font-weight: 300;
+  color: gray;
+  margin: 0.25em 1rem 1rem;
 }
