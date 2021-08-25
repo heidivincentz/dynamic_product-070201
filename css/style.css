@@ -13,7 +13,13 @@ body {
   grid-gap: 1rem;
   grid-template-rows: repeat(auto-fit, minmax(300px, auto));
   padding: 0.5rem;
-  background-color: #252525;
+  /* background-color: #252525; */
+  background: rgb(37, 37, 37);
+  background: radial-gradient(
+    circle,
+    rgba(37, 37, 37, 1) 79%,
+    rgba(245, 25, 161, 1) 100%
+  );
   color: white;
 }
 
@@ -83,6 +89,15 @@ ul {
   /* grid-template-rows: repeat(auto-fill, minmax(40vh, 1fr)); */
   /* Keep adding new rows - even if theres is no content for them. content does not always take up full height */
 }
+#productpage {
+  grid-row: 2 / 3;
+  grid-column: 1 / auto-fill;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: repeat(auto-fill, minmax(40vh, 1fr)); */
+  /* Keep adding new rows - even if theres is no content for them. content does not always take up full height */
+}
 
 footer {
   grid-row: 3 / auto-fit;
@@ -95,22 +110,19 @@ footer > a {
 }
 
 .shirt {
-  border-style: solid;
+  /* border-style: solid;
   border-color: black;
   border-radius: 2em;
-  border-width: 1px;
+  border-width: 1px; */
   display: flex;
   flex-flow: column;
   /* flex-wrap: wrap; */
   padding: 1rem;
   margin: 1rem;
-  /* background-image: url(assets/6401163.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat; */
 }
 
 article > button {
-  background: tomato;
+  background: #f5b231;
   color: #ffffff;
   font-size: 1rem;
   border-radius: 2rem;
@@ -121,7 +133,7 @@ article > button {
 }
 
 button {
-  background: tomato;
+  background: #f5b231;
   color: #ffffff;
   font-size: 1rem;
   border-radius: 2rem;
@@ -165,4 +177,10 @@ p {
 
 .discounted {
   display: flex;
+}
+
+.addtocart {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
