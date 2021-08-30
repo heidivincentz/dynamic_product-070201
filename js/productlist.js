@@ -18,7 +18,7 @@ function handleProductList(data) {
 
 /* <template>
 <article class="shirt smallProduct onSale">
-  <img src="assets/10001163.png" alt="shirt" />
+  <img src="https://kea-alt-del.dk/t7/api/products/1163" alt="shirt" />
   <h2>Shirt 2</h2>
 
   <p class="subtle">T-Shirts | Nike</p>
@@ -44,8 +44,39 @@ function showProduct(product) {
     ".subtle"
   ).textContent = `${product.articletype} | ${product.brandname}`;
   copy.querySelector("h2").textContent = product.productdisplayname;
+
+  if (product.soldout) {
+    copy.querySelector("article").classList.add("soldOut");
+  }
+  if (product.discount) {
+    copy.querySelector("article").classList.add("onSale");
+
+    copy.querySelector(".discounted p").textContent =
+      product.price * (product.discount / 100);
+  }
+
   //  grab parent
   const parent = document.querySelector("main");
   // append
   parent.appendChild(copy);
 }
+
+// const url2 = "https://kea-alt-del.dk/t7/api/products/1163";
+// // fetch data
+// fetch(url2)
+//   .then((res) => res.json())
+//   .then((data) => showProduct(data));
+
+// function showProduct(product) {
+//   console.log(product);
+//   document.querySelector(".breadcrumbs .brand").textContent = product.brandname;
+//   document.querySelector(".breadcrumbs .productname").textContent =
+//     product.productdisplayname;
+// }
+
+// // replace image
+// document.querySelector(
+//   "img.productimage"
+// ).src = `https://kea-alt-del.dk/t7/images/jpg/1000/${product.id}.jpg`;
+
+// document.querySelector("img.productimage").alt = product.productdisplayname;

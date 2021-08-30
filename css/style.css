@@ -80,7 +80,7 @@ ul {
   padding: 1em;
 }
 
-#mainlist {
+.productlist {
   grid-row: 2 / 3;
   grid-column: 1 / auto-fill;
   display: grid;
@@ -189,14 +189,16 @@ p {
 
 .productlist article {
 }
+
 .productlist article.soldOut img {
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .productlist article.soldOut::before {
   content: "Sold Out";
   position: absolute;
   background: var(--color);
+  color: var(--background-color);
   padding: 1rem;
 }
 
@@ -224,4 +226,13 @@ p {
 
 .productlist article {
   margin-bottom: 1rem;
+}
+
+.discounted p:last-child {
+  background: var(--off-color);
+  padding: 0.2rem;
+}
+
+.subtle {
+  color: green;
 }
