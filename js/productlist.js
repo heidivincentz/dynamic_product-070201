@@ -40,7 +40,10 @@ function showProduct(product) {
   //   clone it
   const copy = template.cloneNode(true);
   // change content
-
+  copy.querySelector(
+    ".subtle"
+  ).textContent = `${product.articletype} | ${product.brandname}`;
+  copy.querySelector("h2").textContent = product.productdisplayname;
   //  grab parent
   const parent = document.querySelector("main");
   // append
