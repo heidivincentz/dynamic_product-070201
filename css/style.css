@@ -184,3 +184,44 @@ p {
   align-items: center;
   flex-direction: column;
 }
+
+/* productlist */
+
+.productlist article {
+}
+.productlist article.soldOut img {
+  opacity: 0.5;
+}
+
+.productlist article.soldOut::before {
+  content: "Sold Out";
+  position: absolute;
+  background: var(--color);
+  padding: 1rem;
+}
+
+.productlist article .discounted,
+.productlist article .price span {
+  display: none;
+}
+
+.productlist article.onSale .discounted {
+  display: flex;
+  justify-content: space-between;
+}
+
+.discounted > p {
+  margin-bottom: 0;
+}
+
+.productlist article.onSale .price span {
+  display: initial;
+}
+
+.productlist article button {
+  margin-top: auto;
+}
+
+.productlist article {
+  margin-bottom: 1rem;
+}
