@@ -40,8 +40,9 @@ function showProduct(product) {
   const template = document.querySelector("#smallProductTemplate").content;
   //   clone it
   const copy = template.cloneNode(true);
-  // change content
 
+  // change content
+  copy.querySelector("a").setAttribute("href", "product.html?id=" + product.id);
   copy.querySelector(
     "img"
   ).src = `https://kea-alt-del.dk/t7/images/jpg/640/${product.id}.jpg`;

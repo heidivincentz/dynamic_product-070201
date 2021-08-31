@@ -1,4 +1,8 @@
-const url = "https://kea-alt-del.dk/t7/api/products/1163";
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+const url = "https://kea-alt-del.dk/t7/api/products/" + id;
+
+// const url = "https://kea-alt-del.dk/t7/api/products/1163";
 // fetch data
 fetch(url)
   .then((res) => res.json())
@@ -18,10 +22,6 @@ function showProduct(product) {
   document.querySelector("img.productimage").alt = product.productdisplayname;
 }
 
-const urlParams = new URLSearchParams(window.location.search);
-const query = urlParams.get("q");
-const start = urlParams.get("start");
-
-if (query) {
-} else {
-}
+// if (query) {
+// } else {
+// }
