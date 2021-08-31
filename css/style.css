@@ -243,3 +243,8 @@ p {
 .subtle {
   color: green;
 }
+
+#frontpage {
+  grid-column: 1 / 4;
+  grid-row: 2/4;
+}
