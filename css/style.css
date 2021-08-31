@@ -197,9 +197,16 @@ p {
 .productlist article.soldOut::before {
   content: "Sold Out";
   position: absolute;
-  background: var(--color);
-  color: var(--background-color);
+
+  /* background: var(--color);
+  color: var(--background-color); */
+
+  border-radius: 0.2em;
+
   padding: 1rem;
+  color: white;
+  font-family: itc-avant-garde-gothic-pro;
+  font-size: 3em;
 }
 
 .productlist article .discounted,

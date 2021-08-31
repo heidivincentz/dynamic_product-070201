@@ -17,3 +17,11 @@ function showProduct(product) {
   ).src = `https://kea-alt-del.dk/t7/images/jpg/1000/${product.id}.jpg`;
   document.querySelector("img.productimage").alt = product.productdisplayname;
 }
+
+const urlParams = new URLSearchParams(window.location.search);
+const query = urlParams.get("q");
+const start = urlParams.get("start");
+
+if (query) {
+} else {
+}

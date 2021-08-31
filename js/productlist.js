@@ -34,12 +34,18 @@ function handleProductList(data) {
 
 function showProduct(product) {
   console.log(product);
+
   // grab template
 
   const template = document.querySelector("#smallProductTemplate").content;
   //   clone it
   const copy = template.cloneNode(true);
   // change content
+
+  copy.querySelector(
+    "img"
+  ).src = `https://kea-alt-del.dk/t7/images/jpg/640/${product.id}.jpg`;
+
   copy.querySelector(
     ".subtle"
   ).textContent = `${product.articletype} | ${product.brandname}`;
@@ -74,9 +80,14 @@ function showProduct(product) {
 //     product.productdisplayname;
 // }
 
-// // replace image
+// replace image
+// const productid = 1165;
+// const imagePath = `https://kea-alt-del.dk/t7/images/${type}/${resolution}/${productid}.${type}`;
+
 // document.querySelector(
 //   "img.productimage"
-// ).src = `https://kea-alt-del.dk/t7/images/jpg/1000/${product.id}.jpg`;
+// ).src = `https://kea-alt-del.dk/t7/images/jpg/640/${productid}.jpg`;
+
+// console.log(productid);
 
 // document.querySelector("img.productimage").alt = product.productdisplayname;
