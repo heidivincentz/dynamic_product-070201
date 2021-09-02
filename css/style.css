@@ -34,6 +34,11 @@ h2 {
   font-weight: 700;
 }
 
+h3 {
+  font-size: 1.5em;
+  font-family: poppins;
+  font-weight: 400;
+}
 ul {
   list-style: none;
 }
@@ -247,4 +252,10 @@ p {
 #frontpage {
   grid-column: 1 / 4;
   grid-row: 2/4;
+}
+
+.subcategorylist {
+  list-style: none;
+  font-size: 1.2rem;
+  font-family: poppins;
 }
