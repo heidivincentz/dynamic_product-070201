@@ -258,4 +258,24 @@ p {
   list-style: none;
   font-size: 1.2rem;
   font-family: poppins;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+/* .categorylist {
+  display: flex;
+} */
+
+/* .subcategorylist {
+  display: flex;
+  justify-content: space-between;
+} */
+
+#categorymain {
+  grid-row: 2 / 3;
+  grid-column: 1 / auto-fill;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
 }

@@ -42,50 +42,68 @@ function showSubcategory(subcategory) {
   console.log(subcategory);
 }
 
-{
-  /* <template>
-<section class="categorylinks">
-  <ol>
-    <li><a href="productlist.html">Accessories</a></li>
+const url3 = "https://kea-alt-del.dk/t7/api/products";
 
-    <li><a href="productlist.html">Apparel</a></li>
-    <li><a href="productlist.html">Footwear</a></li>
-    <li><a href="productlist.html">Free Items</a></li>
-    <li><a href="productlist.html">Personal Care</a></li>
-    <li><a href="productlist.html">Sporting Goods</a></li>
-  </ol>
-</section>
+fetch(url3)
+  .then(function (res) {
+    return res.json();
+  })
 
-<div class="categorylist">
-  <section id="accessories">
-    <h2>Footwear</h2>
-    <ol>
-      <li>Running Shoes</li>
-      <li>Asics</li>
-      <li>Barefoot</li>
-      <li>High heels</li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ol>
-  </section>
-</div>
-</template> */
+  .then(function (data) {
+    handleProductList(data);
+  });
+
+function handleProductList(data) {
+  //   console.log(data);
+  data.forEach(function (item) {
+    showProduct(item);
+  });
 }
+function showProduct(product) {
+  console.log(product);
+  {
+    /* <template id="categorytemplate">
+<section class="categorylist">
+  <h2 class="category">Category</h2>
 
-// grab template
+  <h3 class="subcategoryheadline">Subcategories</h3>
+  <ol class="subcategorylist">
+    <li class="subcategory">Running Shoes</li>
+    <li class="subcategory">Asics</li>
+    <li class="subcategory">Barefoot</li>
+    <li class="subcategory">High heels</li>
+    <li class="subcategory"></li>
+    <li class="subcategory"></li>
+    <li class="subcategory"></li>
+    <li class="subcategory"></li>
+    <li class="subcategory"></li>
+    <li class="subcategory"></li>
+  </ol>
+</section> </template> */
+  }
 
-const template = document.querySelector("#categorytemplate").content;
+  // grab template
 
-// clone it
-const copy = template.cloneNode(true);
+  const template = document.querySelector("#categorytemplate").content;
 
-// change content
+  // clone it
+  const copy = template.cloneNode(true);
 
-// grab parent
-const parent = document.querySelector("main");
-// append
-parent.appendChild(copy);
+  // change content
+  copy
+    .querySelector("a")
+    .setAttribute(
+      "href",
+      "product.html/subcategories=" +
+        product.subcategory +
+        "?categories=" +
+        product.category
+    );
+
+  copy.querySelector("h2").textContent = product.category;
+
+  // grab parent
+  const parent = document.querySelector("main");
+  // append
+  parent.appendChild(copy);
+}
