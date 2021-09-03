@@ -263,14 +263,14 @@ p {
   justify-content: space-around;
 }
 
-/* .categorylist {
+.categorylist {
   display: flex;
-} */
+}
 
-/* .subcategorylist {
+.subcategorylist {
   display: flex;
   justify-content: space-between;
-} */
+}
 
 #categorymain {
   grid-row: 2 / 3;

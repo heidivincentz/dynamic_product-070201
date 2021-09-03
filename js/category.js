@@ -90,15 +90,15 @@ function showProduct(product) {
   const copy = template.cloneNode(true);
 
   // change content
-  copy
-    .querySelector("a")
-    .setAttribute(
-      "href",
-      "product.html/subcategories=" +
-        product.subcategory +
-        "?categories=" +
-        product.category
-    );
+  // copy
+  //   .querySelector("a")
+  //   .setAttribute(
+  //     "href",
+  //     "product.html/subcategories=" +
+  //       product.subcategory +
+  //       "?categories=" +
+  //       product.category
+  //   );
 
   copy.querySelector("h2").textContent = product.category;
 

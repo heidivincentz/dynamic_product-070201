@@ -175,5 +175,11 @@
     </footer>
     <!-- <script src="js/product.js"></script> -->
     <script src="js/productlist.js"></script>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const category = urlParams.get("category");
+      document.querySelector(".category").textContent = category;
+    </script>
   </body>
 </html>
